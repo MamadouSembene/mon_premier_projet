@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main ( int argc, char *argv [])
+{
+    int tableau [4], i = 0;
+    tableau [4] = {10,23,505,8}; }
+    /*tableau[0] =10;
+    tableau[1] = 23;
+    tableau[2] =505;
+    tableau[3] = 8;*/
+    for ( i=0; i<4; i++);
+    {
+        printf ("%d\n",tableau[i]);
+    }
+    return 0;
+      }
