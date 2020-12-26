@@ -1,0 +1,29 @@
+body {
+  background: #2c2c2c !important;
+  background-attachment: fixed;
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.card-img {
+  background: url(/images/) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  
+}
+#carousel{
+  margin: 30px;
+}
+#tmpContent{
+  border: blanchedalmond 1px solid;
+  width: 90%;
+  margin: auto;
+}
+#tmp{
+  ;
+}
+#contain{
+  display: flex;
+  justify-content: ;
+}
