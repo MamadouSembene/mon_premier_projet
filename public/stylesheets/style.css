@@ -1,29 +1,26 @@
 body {
   background: #2c2c2c !important;
   background-attachment: fixed;
-  padding: 30px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.card-img {
-  background: url(/images/) ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  
-}
-#carousel{
-  margin: 30px;
-}
 #tmpContent{
   border: blanchedalmond 1px solid;
   width: 90%;
   margin: auto;
-}
-#tmp{
-  ;
-}
-#contain{
   display: flex;
-  justify-content: ;
+  justify-items: center;
+  justify-content: space-around;
+  
+}
+
+#tmp{
+  margin-left: 90px;
+  margin-top: 15px;
+  font-size: 47px;
+}
+#img{
+  width: 115px;
+  margin-right: 55px;
 }

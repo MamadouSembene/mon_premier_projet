@@ -22,10 +22,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//Bring in mongoose
+/*SerialPort et soket*/
+const SerialPort = require('serialport')
+const Readline = require('@serialport/parser-readline')
+const port = new SerialPort('/dev/ttyACM0')
+const parser = new Readline()
+port.pipe(parser)
+
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({port:8081});
+
+wss.on('connection', function connection(ws){
+  console.log("New user is connected");
+  parser.on('data', function(tmp){
+    console.log(tmp);
+    ws.send(tmp)
+  })
+  port.write('ROBOT PLEASE RESPOND\n')
+  ws.on("close", ()=>{
+    console.log("User has disconnected");
+  })
+})
+
+/*//Bring in mongoose
 const mongoose= require('mongoose')
 //COnnecton to mongoose
-mongoose.connect('mongodb://localhost/blog',{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost/blog',{ useNewUrlParser: true, useUnifiedTopology: true })*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
