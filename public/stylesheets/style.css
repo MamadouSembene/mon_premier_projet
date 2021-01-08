@@ -6,7 +6,7 @@ body {
 }
 
 #tmpContent{
-  border: blanchedalmond 1px solid;
+  border: blanchedalmond 2px solid;
   width: 90%;
   margin: auto;
   display: flex;
@@ -23,4 +23,5 @@ body {
 #img{
   width: 115px;
   margin-right: 55px;
+  font-size: 150px;
 }
